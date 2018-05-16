@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<geometry> 
+<!-- 
+==========================================================================
+Description:second_test_openmc  
+Case:2 
+Writen By:Elfallah_bilal 
+Date:2018/05/15 16:06:00
+==========================================================================
+ -->
+ 
+ <surface id="1" type="x-plane" coeffs="-20" />
+<surface id="2" type="x-plane" coeffs="20" />
+ <surface id="3" type="y-plane" coeffs="-20" />
+ <surface id="4" type="y-plane" coeffs="20" />
+ 
+ 
+<surface id="5" type="x-plane" coeffs="-22" boundary="vacuum"/>
+<surface id="6" type="x-plane" coeffs="22" boundary="vacuum"/>
+ <surface id="7" type="y-plane" coeffs="-22" boundary="vacuum"/>
+ <surface id="8" type="y-plane" coeffs="22" boundary="vacuum"/> 
+
+<surface id="9" type="z-plane" coeffs="-40" />
+<surface id="10" type="z-plane" coeffs="30" />
+ <surface id="11" type="z-plane" coeffs="-42" boundary="vacuum"/>
+ <surface id="12" type="z-plane" coeffs="40" boundary="vacuum"/>
+
+ <surface id="98" type="z-plane" coeffs="-25" />
+ <surface id="99" type="z-plane" coeffs="25" />
+
+
+
+<surface id="101" type="z-cylinder" coeffs="-5. -5. 1.5" />
+<surface id="102" type="z-cylinder" coeffs="-5. -5. 1.6" />
+<surface id="103" type="z-cylinder" coeffs="-5. -5. 1.8" />
+
+<surface id="201" type="z-cylinder" coeffs="-5. 5. 1.5" />
+<surface id="202" type="z-cylinder" coeffs="-5. 5. 1.6" />
+<surface id="203" type="z-cylinder" coeffs="-5. 5. 1.8" />
+
+<surface id="301" type="z-cylinder" coeffs="5. -5. 1.5" />
+<surface id="302" type="z-cylinder" coeffs="5. -5. 1.6" />
+<surface id="303" type="z-cylinder" coeffs="5. -5. 1.8" />
+
+<surface id="401" type="z-cylinder" coeffs="5. 5. 1.5" />
+<surface id="402" type="z-cylinder" coeffs="5. 5. 1.6" />
+<surface id="403" type="z-cylinder" coeffs="5. 5. 1.8" />
+
+
+<surface id="501" type="z-cylinder" coeffs="-15. -15. 1.5" />
+<surface id="502" type="z-cylinder" coeffs="-15. -15. 1.6" />
+<surface id="503" type="z-cylinder" coeffs="-15. -15. 1.8" />
+
+<surface id="601" type="z-cylinder" coeffs="-15. 15. 1.5" />
+<surface id="602" type="z-cylinder" coeffs="-15. 15. 1.6" />
+<surface id="603" type="z-cylinder" coeffs="-15. 15. 1.8" />
+
+<surface id="701" type="z-cylinder" coeffs="15. -15. 1.5" />
+<surface id="702" type="z-cylinder" coeffs="15. -15. 1.6" />
+<surface id="703" type="z-cylinder" coeffs="15. -15. 1.8" />
+
+<surface id="801" type="z-cylinder" coeffs="15. 15. 1.5" />
+<surface id="802" type="z-cylinder" coeffs="15. 15. 1.6" />
+<surface id="803" type="z-cylinder" coeffs="15. 15. 1.8" />
+
+
+
+<surface id="901" type="z-cylinder" coeffs="-15. -5. 1.5" />
+<surface id="902" type="z-cylinder" coeffs="-15. -5. 1.6" />
+<surface id="903" type="z-cylinder" coeffs="-15. -5. 1.8" />
+
+<surface id="1001" type="z-cylinder" coeffs="-15. 5. 1.5" />
+<surface id="1002" type="z-cylinder" coeffs="-15. 5. 1.6" />
+<surface id="1003" type="z-cylinder" coeffs="-15. 5. 1.8" />
+
+<surface id="1101" type="z-cylinder" coeffs="15. -5. 1.5" />
+<surface id="1102" type="z-cylinder" coeffs="15. -5. 1.6" />
+<surface id="1103" type="z-cylinder" coeffs="15. -5. 1.8" />
+
+<surface id="1201" type="z-cylinder" coeffs="15. 5. 1.5" />
+<surface id="1202" type="z-cylinder" coeffs="15. 5. 1.6" />
+<surface id="1203" type="z-cylinder" coeffs="15. 5. 1.8" />
+
+
+<surface id="1301" type="z-cylinder" coeffs="-5. -15. 1.5" />
+<surface id="1302" type="z-cylinder" coeffs="-5. -15. 1.6" />
+<surface id="1303" type="z-cylinder" coeffs="-5. -15. 1.8" />
+
+<surface id="1401" type="z-cylinder" coeffs="-5. 15. 1.5" />
+<surface id="1402" type="z-cylinder" coeffs="-5. 15. 1.6" />
+<surface id="1403" type="z-cylinder" coeffs="-5. 15. 1.8" />
+
+<surface id="1501" type="z-cylinder" coeffs="5. -15. 1.5" />
+<surface id="1502" type="z-cylinder" coeffs="5. -15. 1.6" />
+<surface id="1503" type="z-cylinder" coeffs="5. -15. 1.8" />
+
+<surface id="1601" type="z-cylinder" coeffs="5. 15. 1.5" />
+<surface id="1602" type="z-cylinder" coeffs="5. 15. 1.6" />
+<surface id="1603" type="z-cylinder" coeffs="5. 15. 1.8" />
+
+
+<cell id="1" >       <!-- water -->
+   <material>  1  </material>        
+   <region> (1 -2 3 -4 9 -98 )|(1 -2 3 -4 98 -99 103 203 303 403 503 603 703 803 903 1003 1103 1203 1303 1403 1503 1603)|(1 -2 3 -4 99 -10 ) </region>              
+</cell>
+
+
+<cell id="2" >
+   <material> 2  </material>        
+   <region>  (5 -6 7 -8 11 -9)|( 5 -1 7 -8 11 -12) |(2 -6 7 -8 11 -12) | (4 -8 5 -6 11 -12)| (7 -3 5 -6 11 -12) </region>             
+</cell>
+
+<cell id="3" >
+   <material> 3  </material>        
+   <region> 1 -2 3 -4 10  -12 </region>              
+</cell>
+
+<cell id="101" >
+   <material> 4  </material>        
+   <region> -101  98 -99</region>              
+</cell>
+
+<cell id="102" >
+   <material> 5  </material>        
+   <region> 101 -102 98 -99</region>              
+</cell>
+
+<cell id="103" >
+   <material> 2 </material>        
+   <region> 102 -103 98 -99</region>              
+</cell>
+
+
+<cell id="201" >
+   <material> 4  </material>        
+   <region> -201  98 -99</region>              
+</cell>
+
+<cell id="202" >
+   <material> 5  </material>        
+   <region> 201 -202 98 -99</region>              
+</cell>
+
+<cell id="203" >
+   <material> 2 </material>        
+   <region> 202 -203 98 -99</region>              
+</cell>
+
+<cell id="301" >
+   <material> 4  </material>        
+   <region> -301  98 -99</region>              
+</cell>
+
+<cell id="302" >
+   <material> 5  </material>        
+   <region> 301 -302 98 -99</region>              
+</cell>
+
+<cell id="303" >
+   <material> 2 </material>        
+   <region> 302 -303 98 -99</region>              
+</cell>
+
+
+<cell id="401" >
+   <material> 4  </material>        
+   <region> -401  98 -99</region>              
+</cell>
+
+<cell id="402" >
+   <material> 5  </material>        
+   <region> 401 -402 98 -99</region>              
+</cell>
+
+<cell id="403" >
+   <material> 2 </material>        
+   <region> 402 -403 98 -99</region>              
+</cell>
+
+
+
+
+<cell id="501" >
+   <material> 4  </material>        
+   <region> -501  98 -99</region>              
+</cell>
+
+<cell id="502" >
+   <material> 5  </material>        
+   <region> 501 -502 98 -99</region>              
+</cell>
+
+<cell id="503" >
+   <material> 2 </material>        
+   <region> 502 -503 98 -99</region>              
+</cell>
+
+
+<cell id="601" >
+   <material> 4  </material>        
+   <region> -601  98 -99</region>              
+</cell>
+
+<cell id="602" >
+   <material> 5  </material>        
+   <region> 601 -602 98 -99</region>              
+</cell>
+
+<cell id="603" >
+   <material> 2 </material>        
+   <region> 602 -603 98 -99</region>              
+</cell>
+
+<cell id="701" >
+   <material> 4  </material>        
+   <region> -701  98 -99</region>              
+</cell>
+
+<cell id="702" >
+   <material> 5  </material>        
+   <region> 701 -702 98 -99</region>              
+</cell>
+
+<cell id="703" >
+   <material> 2 </material>        
+   <region> 702 -703 98 -99</region>              
+</cell>
+
+
+<cell id="801" >
+   <material> 4  </material>        
+   <region> -801  98 -99</region>              
+</cell>
+
+<cell id="802" >
+   <material> 5  </material>        
+   <region> 801 -802 98 -99</region>              
+</cell>
+
+<cell id="803" >
+   <material> 2 </material>        
+   <region> 802 -803 98 -99</region>              
+</cell>
+
+
+
+<cell id="901" >
+   <material> 4  </material>        
+   <region> -901  98 -99</region>              
+</cell>
+
+<cell id="902" >
+   <material> 5  </material>        
+   <region> 901 -902 98 -99</region>              
+</cell>
+
+<cell id="903" >
+   <material> 2 </material>        
+   <region> 902 -903 98 -99</region>              
+</cell>
+
+
+<cell id="1001" >
+   <material> 4  </material>        
+   <region> -1001  98 -99</region>              
+</cell>
+
+<cell id="1002" >
+   <material> 5  </material>        
+   <region> 1001 -1002 98 -99</region>              
+</cell>
+
+<cell id="1003" >
+   <material> 2 </material>        
+   <region> 1002 -1003 98 -99</region>              
+</cell>
+
+<cell id="1101" >
+   <material> 4  </material>        
+   <region> -1101  98 -99</region>              
+</cell>
+
+<cell id="1102" >
+   <material> 5  </material>        
+   <region> 1101 -1102 98 -99</region>              
+</cell>
+
+<cell id="1103" >
+   <material> 2 </material>        
+   <region> 1102 -1103 98 -99</region>              
+</cell>
+
+<cell id="1201" >
+   <material> 4  </material>        
+   <region> -1201  98 -99</region>              
+</cell>
+
+<cell id="1202" >
+   <material> 5  </material>        
+   <region> 1201 -1202 98 -99</region>              
+</cell>
+
+<cell id="1203" >
+   <material> 2 </material>        
+   <region> 1202 -1203 98 -99</region>              
+</cell>
+
+
+<cell id="1301" >
+   <material> 4  </material>        
+   <region> -1301  98 -99</region>              
+</cell>
+
+<cell id="1302" >
+   <material> 5  </material>        
+   <region> 1301 -1302 98 -99</region>              
+</cell>
+
+<cell id="1303" >
+   <material> 2 </material>        
+   <region> 1302 -1303 98 -99</region>              
+</cell>
+
+
+<cell id="1401" >
+   <material> 4  </material>        
+   <region> -1401  98 -99</region>              
+</cell>
+
+<cell id="1402" >
+   <material> 5  </material>        
+   <region> 1401 -1402 98 -99</region>              
+</cell>
+
+<cell id="1403" >
+   <material> 2 </material>        
+   <region> 1402 -1403 98 -99</region>              
+</cell>
+
+<cell id="1501" >
+   <material> 4  </material>        
+   <region> -1501  98 -99</region>              
+</cell>
+
+<cell id="1502" >
+   <material> 5  </material>        
+   <region> 1501 -1502 98 -99</region>              
+</cell>
+
+<cell id="1503" >
+   <material> 2 </material>        
+   <region> 1502 -1503 98 -99</region>              
+</cell>
+
+<cell id="1601" >
+   <material> 4  </material>        
+   <region> -1601  98 -99</region>              
+</cell>
+
+<cell id="1602" >
+   <material> 5  </material>        
+   <region> 1601 -1602 98 -99</region>              
+</cell>
+
+<cell id="1603" >
+   <material> 2 </material>        
+   <region> 1602 -1603 98 -99</region>              
+</cell>
+
+
+</geometry>

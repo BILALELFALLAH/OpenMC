@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<plots> 
+<!-- 
+==========================================================================
+Description:second_test_openmc  
+Case:2 
+Writen By:El fallah_bilal 
+Date:2018/05/15 16:06:00
+==========================================================================
+ -->
+ <plot id="1" color_by="material"  type="slice" basis="xy" >
+  <origin> 0. 0. 0. </origin>
+  <pixels> 1000 1000  </pixels>
+  <width> 50. 50. </width>
+</plot>
+
+<plot id="2" color_by="material"  type="slice" basis="xz" >
+  <origin> -5. -5. 0. </origin>
+  <pixels> 1000 1000  </pixels>
+  <width> 100. 100. </width>
+</plot>
+<plot id="3" color_by="material"  type="slice" basis="yz" >
+  <origin> 5. 0. 0. </origin>
+  <pixels> 1000 1000  </pixels>
+  <width> 100. 100. </width>
+</plot>
+
+
+
+
+</plots>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<materials> 
+<!-- 
+==========================================================================
+Description:second_test_openmc  
+Case:2 
+Writen By:Elfallah_bilal 
+Date:2018/05/15 16:06:00
+==========================================================================
+ -->
+ 
+<material id="1" >
+  <density value="1" units="g/cc" />
+  <nuclide name="H1"  wo="0.111894" />
+  <nuclide name="O16" wo="0.888106" />
+</material>
+  <material id="2" >
+  <density value="2.7" units="g/cc" />
+  <nuclide name="Al27"  wo="1" />
+  </material>
+<material id="3" >
+ <density value="0.001205" units="g/cc" />
+ <nuclide name="C0"  wo="0.000124" />
+ <nuclide name="N14"  wo="0.755268" />
+ <nuclide name="O16"  wo="0.231781" />
+ <nuclide name="Ar40"  wo="0.0012827" />
+</material>
+  <material id="4" >
+  <density value="10.96" units="g/cc" />
+   <nuclide name="O16"  wo="0.118533" />
+  <nuclide name="U234"  wo="0.000235" />
+  <nuclide name="U235" wo="0.026444" />
+ <nuclide name="U236"  wo="0.000122" />
+  <nuclide name="U238" wo="0.854666" />
+ 
+</material>
+
+<material id="5" >
+  <density value="0.001598" units="g/cc" />
+  <nuclide name="He4"  wo="1" />
+  </material>
+  
+  
+</materials>
